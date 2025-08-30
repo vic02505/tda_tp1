@@ -34,9 +34,7 @@ F_j = F_i + t_j
 $$
 
 - De manera general, si tenemos un orden
-$$ 
-\pi = [\pi_1, \pi_2, \pi_3, ..., \pi_n] 
-$$
+$\pi = [\pi_1, \pi_2, \pi_3, ..., \pi_n]$
 
 $$
 F_{\pi_1} = t_{\pi_1}, \quad F_{\pi_2} = t_{\pi_1} + t_{\pi_2}, \quad \dots, \quad F_{\pi_k} = \sum_{j=1}^{k} t_{\pi_j}
