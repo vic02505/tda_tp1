@@ -155,25 +155,34 @@ $$
 C_{i \to j} -  C_{j \to i​} = ?
 $$
 Desarrollo cada costo:
+
+$(1)$
 $$
-C_{i \to j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​) \\
+C_{i \to j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​)
+$$
+$$
 C_{i \to j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​
 $$
+--------------------------
 
-
+$(2)$
 $$
-C_{j \to i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)\\
+C_{j \to i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)
+$$
+$$
 C_{j \to i​}=b_j​ T+b_j t_j+b_i T+ b_i t_j​+ b_i t_i​
 $$
 
-Ahora si calculo: $C_{i \to j} -  C_{j \to i​}$. Resto m.a.m.
 Ahora si calculo: $C_{i \to j} -  C_{j \to i}$. Resto m.a.m.
 
+$(3)$
 $$
-C_{i \to j} = b_i T + b_i t_i + b_j T + b_j t_i + b_j t_j \\
+C_{i \to j} = b_i T + b_i t_i + b_j T + b_j t_i + b_j t_j
+$$
+$$
 C_{j \to i} = b_i T + b_i t_i + b_j T + b_j t_j + b_i t_j
 $$
-
+----------------------
 $$
 C_{i \to j} -  C_{j \to i} = b_j t_i - b_i t_j
 $$
@@ -183,8 +192,12 @@ Entonces:
 - Si $b_j t_i > b_i t_j$ ; $C_{i \to j} > C_{j \to i​}$ el costo de $i$ esté antes que $j$ es mayor, por lo que conviene que $j$ vaya antes que $i$
 - $C_{i \to j} > C_{j \to i​}$ es equivalente:
 $$
-b_j t_i > b_i t_j \\
-t_i > b_i t_j / b_j \\
+b_j t_i > b_i t_j
+$$
+$$
+t_i > b_i t_j / b_j
+$$
+$$
 t_i / b_i > t_j / b_j
 $$
 
