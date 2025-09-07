@@ -142,41 +142,41 @@ Queremos decidir cuál va antes...
 
 ### Caso 1: $i$ antes que $j$
 $$
-C_{i→j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​)
+C_{i \to j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​)
 $$
 ### Caso 2: $j$ antes que $i$
 
 $$
-C_{j→i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)
+C_{j \to i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)
 $$
 
 ### Calculo diferencia de costos
 $$
-C_{i→j} -  C_{j→i​} = ?
+C_{i \to j} -  C_{j \to i​} = ?
 $$
 Desarrollo cada costo:
 $$
-C_{i→j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​) \\
-C_{i→j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​
+C_{i \to j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​) \\
+C_{i \to j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​
 $$
 
 
 $$
-C_{j→i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)\\
-C_{j→i​}=b_j​ T+b_j t_j+b_i T+ b_i t_j​+ b_i t_i​
+C_{j \to i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)\\
+C_{j \to i​}=b_j​ T+b_j t_j+b_i T+ b_i t_j​+ b_i t_i​
 $$
 
-Ahora si calculo: $C_{i→j} -  C_{j→i​}$. Resto m.a.m.
+Ahora si calculo: $C_{i \to j} -  C_{j \to i​}$. Resto m.a.m.
 $$
-C_{i→j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​ \\
-C_{j→i​}=b_i​ T+b_i t_i+b_j T+ b_j t_j​+ b_i t_ij \\
+C_{i \to j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​ \\
+C_{j \to i​}=b_i​ T+b_i t_i+b_j T+ b_j t_j​+ b_i t_ij \\
 ------------------\\
-C_{i→j} -  C_{j→i​} = b_j t_i - b_i t_j
+C_{i \to j} -  C_{j \to i​} = b_j t_i - b_i t_j
 $$
 
 Entonces:
-- Si $b_j t_i > b_i t_j$ ; $C_{i→j} > C_{j→i​}$ el costo de $i$ esté antes que $j$ es mayor, por lo que conviene que $j$ vaya antes que $i$
-- $C_{i→j} > C_{j→i​}$ es equivalente:
+- Si $b_j t_i > b_i t_j$ ; $C_{i \to j} > C_{j \to i​}$ el costo de $i$ esté antes que $j$ es mayor, por lo que conviene que $j$ vaya antes que $i$
+- $C_{i \to j} > C_{j \to i​}$ es equivalente:
 $$
 b_j t_i > b_i t_j \\
 t_i > b_i t_j / b_j \\
