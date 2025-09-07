@@ -187,3 +187,18 @@ t_i / b_i > t_j / b_j
 $$
 
 Por lo tanto, para minimizar la sumatoria del costo total de todas las batallas, el orden que esté $t/b$ debe ser creciente.
+
+## Variabilidad de $t_i$, $b_i$
+El algoritmo planteado tiene una complejidad de $O(n * log n)$.
+
+Las variables $t_i$, $b_i$ afectan únicamente al orden final de las batallas, pero no afectan la cantidad de operaciones realizadas.
+
+- Tenemos $n$ batallas y hacemos operaciones con cada una.
+- La operación de ordenar con ``sorted`` tiene complejidad $O(n * log n)$
+- La operación de calcular el cociente $t_i/b_i$ es $O(1)$ por cada batalla, lo que en total es $O(n)$.
+- Por lo tanto, el paso de cálculo de la prioridad y el ordenamiento conjunto sigue siendo $O(n * log n)$.
+- Finalmente, calcular el coeficiente de batallas planificadas es $O(n)$ , y en este punto los valores de $t_i$, $b_i$ ya han sido considerados al ordenar la lista.
+
+Entonces:
+- La variabilidad de $t_i$, $b_i$ no afecta la complejidad temporal del algoritmo.
+- Lo que si cambia es el resultado final del coeficiente, es decir, el orden óptimo de las batallas.
