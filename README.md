@@ -191,15 +191,12 @@ $$
 Entonces:
 - Si $b_j t_i > b_i t_j$ ; $C_{i \to j} > C_{j \to i​}$ el costo de $i$ esté antes que $j$ es mayor, por lo que conviene que $j$ vaya antes que $i$
 - $C_{i \to j} > C_{j \to i​}$ es equivalente:
-$$
-b_j t_i > b_i t_j
-$$
-$$
-t_i > b_i t_j / b_j
-$$
-$$
-t_i / b_i > t_j / b_j
-$$
+
+    $b_j t_i > b_i t_j$
+
+    $t_i > b_i t_j / b_j$
+
+    $t_i / b_i > t_j / b_j$
 
 Por lo tanto, para minimizar la sumatoria del costo total de todas las batallas, el orden que esté $t/b$ debe ser creciente.
 
