@@ -75,3 +75,43 @@ $$
 - Ordenar las batallas según esa prioridad.
 - Procesarlas secuencialmente en ese orden.
 - Sumar los tiempos de finalización para calcular la función objetivo.
+
+# Análisis de complejidad
+
+```python
+# O(n)
+def obtener_coeficiente_de_batallas(batallas_planificadas: list[tuple[int,int]]) -> int:
+
+    coeficiente = 0     # O(1)
+    suma_parcial = 0    # O(1)
+
+    for batalla in batallas_planificadas: # O(n)
+        suma_parcial += batalla[0]  # O(1)
+        coeficiente += batalla[1]*suma_parcial # O(1)
+
+    return coeficiente
+
+
+def planificar_batallas(batallas_a_planificar: list[tuple[int,int]]) -> int:
+
+    planificacion = [] # O(1)
+    # O(n log n) por usar sorted
+    batallas_a_planificar_aux = sorted(batallas_a_planificar, key=lambda x: x[0]/x[1])
+
+    for batalla in batallas_a_planificar_aux: # O(n)
+        planificacion.append(batalla)
+
+    coef = obtener_coeficiente_de_batallas(planificacion) # O(n)
+
+    return coef
+
+'''
+  1. obtener_coeficiente_de_batallas:
+      O(n)
+
+  2. planificar_batallas:
+      O(n log n) + O(n) + O(n) = O(n log n) + 2 O(n) = O(n log n) pues crece más rápido que O(n)
+
+  ====>  Algoritmo greedy : O(n log n)
+'''
+```
