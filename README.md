@@ -159,10 +159,10 @@ Desarrollo cada costo:
 
 $(1)$
 $$
-C_{i \to j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​)
-$$
-$$
+\begin{align*}
+C_{i \to j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​)\\
 C_{i \to j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​
+\end{align*}
 $$
 
 
