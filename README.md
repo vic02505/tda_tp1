@@ -157,9 +157,7 @@ $$
 Desarrollo cada costo:
 $$
 C_{i→j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​) \\
-
 C_{i→j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​
-
 $$
 
 
@@ -170,7 +168,6 @@ $$
 
 Ahora si calculo: $C_{i→j} -  C_{j→i​}$. Resto m.a.m.
 $$
-
 C_{i→j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​ \\
 C_{j→i​}=b_i​ T+b_i t_i+b_j T+ b_j t_j​+ b_i t_ij \\
 ------------------\\
