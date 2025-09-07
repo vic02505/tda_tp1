@@ -115,3 +115,75 @@ def planificar_batallas(batallas_a_planificar: list[tuple[int,int]]) -> int:
   ====>  Algoritmo greedy : O(n log n)
 '''
 ```
+
+# Justificación del algoritmo
+Como mencionamos anteriormente, estamos frente a un problema de Scheduling donde buscamos desarrollar la mayor cantidad de batallas importantes. Es decir, minimizar la suma ponderada de los tiempos de finalización. 
+
+$$
+\sum_{i=1}^{n} b_i F_i
+$$
+
+Para ello lo que planteamos fue:
+- Decidir en qué orden ejecutar las batallas
+- según el orden de importancia y tiempo de duración
+
+$$
+t_i / b_i
+$$
+
+Entonces, de esta forma nos garantizamos que la batalla que dure menos tiempo y sea más importante va a suceder primero.
+
+## ¿Por qué $t/b$?
+Haciendo el análisis de dos batallas:
+  - $t_i,b_i$
+  - $t_j,b_j$
+
+Queremos decidir cuál va antes...
+
+### Caso 1: $i$ antes que $j$
+$$
+C_{i→j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​)
+$$
+### Caso 2: $j$ antes que $i$
+
+$$
+C_{j→i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)
+$$
+
+### Calculo diferencia de costos
+$$
+C_{i→j} -  C_{j→i​} = ?
+$$
+Desarrollo cada costo:
+$$
+C_{i→j}​=b_i​(T+t_i​)+b_j​(T+t_i​+t_j​) \\
+
+C_{i→j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​
+
+$$
+
+
+$$
+C_{j→i​}=b_j​(T+t_j​)+b_i​(T+t_j​+t_i​)\\
+C_{j→i​}=b_j​ T+b_j t_j+b_i T+ b_i t_j​+ b_i t_i​
+$$
+
+Ahora si calculo: $C_{i→j} -  C_{j→i​}$. Resto m.a.m.
+$$
+
+C_{i→j}​=b_i T+ b_i t_i +b_j​ T+b_j t_i​+ bj t_j​ \\
+C_{j→i​}=b_i​ T+b_i t_i+b_j T+ b_j t_j​+ b_i t_ij \\
+------------------\\
+C_{i→j} -  C_{j→i​} = b_j t_i - b_i t_j
+$$
+
+Entonces:
+- Si $b_j t_i > b_i t_j$ ; $C_{i→j} > C_{j→i​}$ el costo de $i$ esté antes que $j$ es mayor, por lo que conviene que $j$ vaya antes que $i$
+- $C_{i→j} > C_{j→i​}$ es equivalente:
+$$
+b_j t_i > b_i t_j \\
+t_i > b_i t_j / b_j \\
+t_i / b_i > t_j / b_j
+$$
+
+Por lo tanto, para minimizar la sumatoria del costo total de todas las batallas, el orden que esté $t/b$ debe ser creciente.
