@@ -2,14 +2,12 @@ from lector_de_archivos.resultados_esperados import obtener_resultados_esperados
 from lector_de_archivos.parser_de_batallas import leer_batallas
 from algoritmo.greedy import planificar_batallas
 
-def correr_pruebas_catedra():
+def correr_pruebas_propias():
 
-    resultados_esperados = obtener_resultados_esperados("archivos/resultados_esperados.txt")
-    tests = ["10.txt", "50.txt", "100.txt", "1000.txt",
-             "5000.txt", "10000.txt", "100000.txt"]
-             
+    resultados_esperados = obtener_resultados_esperados("archivos/resultados_esperados_propios.txt")
+    tests = ["prueba1.txt", "prueba2.txt", "prueba3.txt"]
 
-    print("######## Pruebas de la catedra ########")
+    print("\n######## Pruebas propias ########")
     for test in tests:
         batallas = leer_batallas("archivos/"+ test)
         coef = planificar_batallas(batallas)
