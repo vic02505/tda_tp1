@@ -16,16 +16,16 @@ def get_args(n):
     return (generar_batallas(n),)
 
 def generar_grafico():
-    # 1) Tamaños de entrada
+    # Tamaños de entrada
     sizes = np.linspace(1_000, 100_000, 20).astype(int)
 
-    # 2) Medir tiempos usando util.py
+    # Medir tiempos usando util.py
     resultados = time_algorithm(planificar_batallas, sizes, get_args)
 
     x = np.array(list(resultados.keys()))
     y = np.array(list(resultados.values()))
 
-    # 3) Ajuste por cuadrados mínimos: complejidad esperada O(n log n)
+    # Ajuste por cuadrados mínimos: complejidad esperada O(n log n)
     def modelo_nlogn(n, c1, c2):
         return c1 * n * np.log(n) + c2
     
@@ -45,7 +45,7 @@ def generar_grafico():
 
     # c2 es un desfase o tiempo base. Representa un tiempo inicial “fijo” que el algoritmo tarda independientemente del tamaño (por ejemplo, overhead de iniciar la función).
 
-    # 4) Calcular errores
+    # Calcular errores
     y_pred = modelo_nlogn(x, c1, c2)
 
     # y_pred[i] es el tiempo que la curva ajustada dice que debería tomar el algoritmo para x[i].
@@ -54,11 +54,11 @@ def generar_grafico():
     # Error cuadrático total (||Ax - b||^2)
     r = np.sum((y_pred - y)**2)
     print(f"Error cuadrático total: {r}")#notacion cientifica
-    print(f"Error cuadrático total: {r:.20f}")#decimal con 20 decimales
+    print(f"Error cuadrático total con decimales: {r:.20f}")#decimal con 20 decimales
 
     errores_abs = np.abs(y_pred - y)
 
-    # 5) Graficar tiempos vs curva ajustada
+    # Graficar tiempos vs curva ajustada
     plt.figure()
     plt.plot(x, y, "bo", label="Mediciones")
     plt.plot(x, y_pred, "r--", label="Ajuste $n \\log n$")
@@ -68,7 +68,7 @@ def generar_grafico():
     plt.legend()
     plt.show()
 
-    # 6) Graficar error absoluto
+    # Graficar error absoluto
     plt.figure()
     plt.plot(x, errores_abs, "g")
     plt.xlabel("Tamaño n")
