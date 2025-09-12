@@ -5,11 +5,11 @@ import numpy as np
 
 from .util import time_algorithm
 
-# Genera listas de batallas (b, t)
+# Genera listas de batallas (t, b)
 def generar_batallas(n):
     b = np.random.randint(1, 1000, n)
     t = np.random.randint(1, 1000, n)
-    return list(zip(b, t))
+    return list(zip(t, b))
 
 # Le dice a time_algorithm cómo generar los argumentos para cada n
 def get_args(n):
@@ -53,8 +53,8 @@ def generar_grafico():
 
     # Error cuadrático total (||Ax - b||^2)
     r = np.sum((y_pred - y)**2)
-    print(f"Error cuadrático total: {r}")#notacion cientifica
-    print(f"Error cuadrático total con decimales: {r:.20f}")#decimal con 20 decimales
+    print(f"Error cuadrático total: {r}") # notacion cientifica
+    print(f"Error cuadrático total con decimales: {r:.20f}") # con 20 decimales
 
     errores_abs = np.abs(y_pred - y)
 
