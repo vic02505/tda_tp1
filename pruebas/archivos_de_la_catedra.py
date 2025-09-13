@@ -1,6 +1,8 @@
 from lector_de_archivos.resultados_esperados import obtener_resultados_esperados
 from lector_de_archivos.parser_de_batallas import leer_batallas
 from algoritmo.greedy import planificar_batallas
+from utils.printer import imprimir_test
+
 
 def correr_pruebas():
 
@@ -10,8 +12,5 @@ def correr_pruebas():
 
     for test in tests:
         batallas = leer_batallas("archivos/"+ test)
-        coef = planificar_batallas(batallas)
-        if coef != resultados_esperados[test]:
-            print(f"{test}: FALLO")
-        else:
-            print(f"{test}: OK")
+        _, coef = planificar_batallas(batallas)
+        imprimir_test(test, coef, resultados_esperados[test])

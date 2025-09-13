@@ -1,4 +1,3 @@
-
 def obtener_coeficiente_de_batallas(batallas_planificadas: list[tuple[int,int]]) -> int:
 
     coeficiente = 0
@@ -11,15 +10,11 @@ def obtener_coeficiente_de_batallas(batallas_planificadas: list[tuple[int,int]])
     return coeficiente
 
 
-def planificar_batallas(batallas_a_planificar: list[tuple[int,int]]) -> int:
+def planificar_batallas(batallas_a_planificar: list[tuple[int,int]]) -> tuple[list[tuple[int, int]], int]:
 
-    planificacion = []
     batallas_a_planificar_aux = sorted(batallas_a_planificar, key=lambda x: x[0]/x[1])
 
-    for batalla in batallas_a_planificar_aux:
-        planificacion.append(batalla)
+    coef = obtener_coeficiente_de_batallas(batallas_a_planificar_aux)
 
-    coef = obtener_coeficiente_de_batallas(planificacion)
-
-    return coef
+    return batallas_a_planificar_aux, coef
 
