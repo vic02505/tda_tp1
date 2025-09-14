@@ -7,7 +7,7 @@ def main():
 
     correr_pruebas_propias()
 
-    generar_grafico()
+    # generar_grafico()
 
 if __name__ == "__main__":
     main()

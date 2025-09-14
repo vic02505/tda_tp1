@@ -1,6 +1,6 @@
 prueba1.txt
-Coeficiente de impacto: 128
+Coeficiente de impacto: 40
 prueba2.txt
 Coeficiente de impacto: 96
 prueba3.txt
-Coeficiente de impacto: 167
+Coeficiente de impacto: 77

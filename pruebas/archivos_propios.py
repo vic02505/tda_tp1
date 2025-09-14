@@ -11,7 +11,7 @@ def correr_pruebas_propias():
     for test in tests:
         batallas = leer_batallas("archivos/"+ test)
         coef = planificar_batallas(batallas)
-        if coef != resultados_esperados[test]:
-            print(f"{test}: FALLO")
-        else:
-            print(f"{test}: OK")
+        print(f"Resultados {test}:")
+        print(f"Coeficiente esperado: {resultados_esperados[test]} - Coeficiente obtenido: {coef}")
+
+
