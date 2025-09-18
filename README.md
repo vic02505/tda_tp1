@@ -3,7 +3,7 @@ Repositorio del primer trabajo práctico de la materia Teoría de Algoritmos.
 
 | Nombre           | Apellido      | Padrón   |
 |------------------|---------------|----------|
-| Víctor           | Zacarías      | 17080    |
+| Víctor           | Zacarías      | 107080    |
 | Carolina         | Aramayo       | 106260   |
 | Francisco Nahuel | Tapia         | 107128   |
 | Joel Isaac      | Fernandez Fox | 104424    | 
