@@ -3,6 +3,7 @@ from pruebas.archivos_de_la_catedra import correr_pruebas
 from algoritmo.greedy import  planificar_batallas
 from lector_de_archivos.parser_de_batallas import leer_batallas
 from utils.printer import imprimir_solucion
+from utils.graficos import generar_grafico
 
 MODO_NORMAL = "1"
 MODO_DE_TESTS = "2"
@@ -13,6 +14,7 @@ def main():
     nombre_archivo = None
 
     if modo_de_ejecucion == MODO_NORMAL:
+        # generar_grafico()
         nombre_archivo = sys.argv[2]
 
     if modo_de_ejecucion == MODO_NORMAL:
