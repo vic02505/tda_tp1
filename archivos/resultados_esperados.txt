@@ -1,0 +1,20 @@
+10.txt
+Coeficiente de impacto: 309600
+50.txt
+Coeficiente de impacto: 5218700
+100.txt
+Coeficiente de impacto: 780025365
+1000.txt
+Coeficiente de impacto: 74329021942
+5000.txt
+Coeficiente de impacto: 1830026958236
+10000.txt
+Coeficiente de impacto: 7245315862869
+100000.txt
+Coeficiente de impacto: 728684685661017
+ejemplo1.txt
+Coeficiente de impacto: 40
+ejemplo2.txt
+Coeficiente de impacto: 96
+ejemplo3.txt
+Coeficiente de impacto: 77
