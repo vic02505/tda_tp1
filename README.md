@@ -1,4 +1,4 @@
-# Trabajo práctico #1 - Teoría de Algoritmos'
+# Trabajo práctico #1 - Teoría de Algoritmos
 Repositorio del primer trabajo práctico de la materia Teoría de Algoritmos. 
 
 | Nombre           | Apellido      | Padrón   |
