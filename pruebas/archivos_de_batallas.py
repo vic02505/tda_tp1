@@ -8,7 +8,7 @@ def correr_pruebas():
 
     resultados_esperados = obtener_resultados_esperados("archivos/resultados_esperados.txt")
     tests = ["10.txt", "50.txt", "100.txt", "1000.txt",
-             "5000.txt", "10000.txt", "100000.txt"]
+             "5000.txt", "10000.txt", "100000.txt", "ejemplo1.txt", "ejemplo2.txt", "ejemplo3.txt"]
 
     for test in tests:
         batallas = leer_batallas("archivos/"+ test)

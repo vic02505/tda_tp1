@@ -19,7 +19,7 @@ python3 main.py 1 <nombre_de_archivo>
 para correr el algoritmo sobre el archivo **10.txt** es necesario escribir desde la raíz del proyecto la línea 
 de comandos `python3 main.py 1 10.txt`.
 
-2. Para correr los tests:
+2. Para correr los tests sobre todos los archivos con batallas:
 
 ```bash
 python3 main.py 2

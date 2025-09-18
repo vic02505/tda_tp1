@@ -12,3 +12,9 @@ Coeficiente de impacto: 1830026958236
 Coeficiente de impacto: 7245315862869
 100000.txt
 Coeficiente de impacto: 728684685661017
+ejemplo1.txt
+Coeficiente de impacto: 40
+ejemplo2.txt
+Coeficiente de impacto: 96
+ejemplo3.txt
+Coeficiente de impacto: 77

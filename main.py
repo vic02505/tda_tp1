@@ -1,9 +1,9 @@
 import sys
-from pruebas.archivos_de_la_catedra import correr_pruebas
+from pruebas.archivos_de_batallas import correr_pruebas
 from algoritmo.greedy import  planificar_batallas
 from lector_de_archivos.parser_de_batallas import leer_batallas
 from utils.printer import imprimir_solucion
-from utils.graficos import generar_grafico
+#from utils.graficos import generar_grafico
 
 MODO_NORMAL = "1"
 MODO_DE_TESTS = "2"
